@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Z.WMS", "Z.WMS\Z.WMS.csproj", "{E4F22EA6-56A2-4C7A-849F-BC648A10C75C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Z.Common", "Z.Common\Z.Common.csproj", "{7446594A-4BAF-498E-A0CB-EB010CA48F51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Z.Communicate", "Z.Communicate\Z.Communicate.csproj", "{1A3C347E-F4FE-4A67-B74A-3CCE38A5B48F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4F22EA6-56A2-4C7A-849F-BC648A10C75C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4F22EA6-56A2-4C7A-849F-BC648A10C75C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4F22EA6-56A2-4C7A-849F-BC648A10C75C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4F22EA6-56A2-4C7A-849F-BC648A10C75C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7446594A-4BAF-498E-A0CB-EB010CA48F51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7446594A-4BAF-498E-A0CB-EB010CA48F51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7446594A-4BAF-498E-A0CB-EB010CA48F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7446594A-4BAF-498E-A0CB-EB010CA48F51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A3C347E-F4FE-4A67-B74A-3CCE38A5B48F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A3C347E-F4FE-4A67-B74A-3CCE38A5B48F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A3C347E-F4FE-4A67-B74A-3CCE38A5B48F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A3C347E-F4FE-4A67-B74A-3CCE38A5B48F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E72F4CB5-31F7-4709-9AC6-C003357AC944}
+	EndGlobalSection
+EndGlobal
