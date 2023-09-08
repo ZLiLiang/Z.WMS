@@ -41,7 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modbus\ModbusASCII.cs" />
+    <Compile Include="Modbus\ModbusBase.cs" />
+    <Compile Include="Modbus\ModbusRTU.cs" />
+    <Compile Include="Modbus\NetworkBase.cs" />
+    <Compile Include="Modbus\SerialPortBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
