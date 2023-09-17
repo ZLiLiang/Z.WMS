@@ -46,14 +46,150 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Utility\BttonPage.cs" />
+    <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\FormUtility.cs" />
+    <Compile Include="Models\FInfoData.cs" />
+    <Compile Include="Models\RegionStateModel.cs" />
+    <Compile Include="Models\RegionTemperData.cs" />
+    <Compile Include="Utility\MsgBoxHelper.cs" />
+    <Compile Include="Product\FormProductInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\FormProductInfo.Designer.cs">
+      <DependentUpon>FormProductInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\FormProductInStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\FormProductInStore.Designer.cs">
+      <DependentUpon>FormProductInStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\FormProductList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\FormProductList.Designer.cs">
+      <DependentUpon>FormProductList.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StoreTemper\FormSetSRegionTemperature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoreTemper\FormSetSRegionTemperature.Designer.cs">
+      <DependentUpon>FormSetSRegionTemperature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoreTemper\FormStoreRegionTemperatureList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoreTemper\FormStoreRegionTemperatureList.Designer.cs">
+      <DependentUpon>FormStoreRegionTemperatureList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store\FormStoreInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store\FormStoreInfo.Designer.cs">
+      <DependentUpon>FormStoreInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store\FormStoreList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store\FormStoreList.Designer.cs">
+      <DependentUpon>FormStoreList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store\FormStoreRegionInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store\FormStoreRegionInfo.Designer.cs">
+      <DependentUpon>FormStoreRegionInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store\FormStoreRegionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store\FormStoreRegionList.Designer.cs">
+      <DependentUpon>FormStoreRegionList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControls\UCircle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControls\UCircle.Designer.cs">
+      <DependentUpon>UCircle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControls\UCircleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UControls\UCircleButton.Designer.cs">
+      <DependentUpon>UCircleButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControls\UIconButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UControls\UIconButton.Designer.cs">
+      <DependentUpon>UIconButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControls\UIndicatorLight.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControls\UIndicatorLight.Designer.cs">
+      <DependentUpon>UIndicatorLight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControls\UMenuButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControls\UMenuButton.Designer.cs">
+      <DependentUpon>UMenuButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControls\UPageButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControls\UPageButton.Designer.cs">
+      <DependentUpon>UPageButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControls\UPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UControls\UPanel.Designer.cs">
+      <DependentUpon>UPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControls\UStoreRegionArgs.cs" />
+    <Compile Include="UControls\UStoreRegionBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControls\UStoreRegionBox.Designer.cs">
+      <DependentUpon>UStoreRegionBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControls\UThermometer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControls\UThermometer.Designer.cs">
+      <DependentUpon>UThermometer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\FormProductInfo.resx">
+      <DependentUpon>FormProductInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\FormProductInStore.resx">
+      <DependentUpon>FormProductInStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\FormProductList.resx">
+      <DependentUpon>FormProductList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +198,32 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="StoreTemper\FormSetSRegionTemperature.resx">
+      <DependentUpon>FormSetSRegionTemperature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoreTemper\FormStoreRegionTemperatureList.resx">
+      <DependentUpon>FormStoreRegionTemperatureList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Store\FormStoreInfo.resx">
+      <DependentUpon>FormStoreInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControls\UCircleButton.resx">
+      <DependentUpon>UCircleButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControls\UMenuButton.resx">
+      <DependentUpon>UMenuButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControls\UPageButton.resx">
+      <DependentUpon>UPageButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControls\UStoreRegionBox.resx">
+      <DependentUpon>UStoreRegionBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControls\UThermometer.resx">
+      <DependentUpon>UThermometer.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -76,5 +237,35 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Z.BLL\Z.BLL.csproj">
+      <Project>{71DE26DD-57FE-48DD-A200-C1AC13BD6A95}</Project>
+      <Name>Z.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Z.Common\Z.Common.csproj">
+      <Project>{7446594A-4BAF-498E-A0CB-EB010CA48F51}</Project>
+      <Name>Z.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Z.Models\Z.Models.csproj">
+      <Project>{B33CF025-F5DA-4D6C-9246-A63E496FDE08}</Project>
+      <Name>Z.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\01.png" />
+    <Content Include="Resources\02.png" />
+    <Content Include="Resources\03.png" />
+    <Content Include="Resources\04.png" />
+    <Content Include="Resources\btnbg01.png" />
+    <Content Include="Resources\btnbg02.png" />
+    <Content Include="Resources\btnbg03.png" />
+    <Content Include="Resources\btnbg04.png" />
+    <Content Include="Resources\btnbg05.png" />
+    <Content Include="Resources\logbg.jpg" />
+    <Content Include="Resources\loginbgin.png" />
+    <Content Include="Resources\logo.png" />
+    <Content Include="Resources\store_32.ico" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

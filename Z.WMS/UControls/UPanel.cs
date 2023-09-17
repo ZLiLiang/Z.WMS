@@ -15,11 +15,11 @@ namespace Z.WMS.UControls
     public partial class UPanel : Panel
     {
         private const int WM_PAINT = 0xF;
-
         public UPanel()
         {
             InitializeComponent();
         }
+
         private Color bgColor = Color.Gray;
 
         /// <summary>
@@ -121,7 +121,7 @@ namespace Z.WMS.UControls
             rect.Width -= 1;
             rect.Height -= 1;
 
-            if (BorderWidth > 0)//边框粗细>0
+            if (BorderWidth > 0)//边框粗细》0
             {
                 GraphicsPath path = new GraphicsPath();
                 path = PaintCommon.GetRoundRectangle(rect, radius);//绘制圆角矩形路径
@@ -144,17 +144,17 @@ namespace Z.WMS.UControls
         private void DrawBackColor(Graphics g, Rectangle rect, int radius)
         {
             //获取背景区域的圆角矩形
-            GraphicsPath path = PaintCommon.GetRoundRectangle(rect, radius);
+            GraphicsPath path1 = PaintCommon.GetRoundRectangle(rect, radius);
             if (this.BgColor2 != Color.Transparent)
             {
                 //线型渐变画刷
                 LinearGradientBrush brush = new LinearGradientBrush(rect, BgColor, BgColor2, gradientMode);
-                g.FillPath(brush, path);//填充圆角矩形内部
+                g.FillPath(brush, path1);//填充圆角矩形内部
             }
             else
             {
-                Brush brush = new SolidBrush(BgColor);
-                g.FillPath(brush, path);//填充圆角矩形内部
+                Brush b = new SolidBrush(BgColor);
+                g.FillPath(b, path1);//填充圆角矩形内部
             }
         }
     }

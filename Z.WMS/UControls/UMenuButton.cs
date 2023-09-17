@@ -41,6 +41,8 @@ namespace Z.WMS.UControls
             }
         }
 
+        public bool IsCheck { get; set; } = false;
+
         protected override void OnMouseEnter(EventArgs e)
         {
             base.OnMouseEnter(e);
@@ -50,13 +52,18 @@ namespace Z.WMS.UControls
         protected override void OnMouseLeave(EventArgs e)
         {
             base.OnMouseLeave(e);
-            this.BackColor = Color.FromArgb(45, 50, 166);
+            if (IsCheck == false)
+            {
+                this.BackColor = Color.FromArgb(45, 50, 116);
+            }
         }
 
         protected override void OnMouseClick(MouseEventArgs e)
         {
+
             base.OnMouseClick(e);
             this.BackColor = Color.FromArgb(88, 116, 216);
+
         }
 
         private void lblBtnText_Click(object sender, EventArgs e)
