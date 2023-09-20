@@ -31,7 +31,6 @@ namespace Z.WMS
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelTop = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblLoginTime = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,31 +39,18 @@ namespace Z.WMS
             this.panelPageTop = new System.Windows.Forms.Panel();
             this.panelPage = new System.Windows.Forms.Panel();
             this.uPanel1 = new Z.WMS.UControls.UPanel();
+            this.btnUserManager = new Z.WMS.UControls.UMenuButton();
             this.btnStoreTemperManage = new Z.WMS.UControls.UMenuButton();
             this.btnProductManage = new Z.WMS.UControls.UMenuButton();
             this.btnStoreManage = new Z.WMS.UControls.UMenuButton();
+            this.panelTop = new System.Windows.Forms.Panel();
             this.btnClose = new Z.WMS.UControls.UIconButton();
             this.btnMax = new Z.WMS.UControls.UIconButton();
             this.btnMin = new Z.WMS.UControls.UIconButton();
-            this.panelTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.uPanel1.SuspendLayout();
+            this.panelTop.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panelTop
-            // 
-            this.panelTop.BackgroundImage = global::Z.WMS.Properties.Resources.logo;
-            this.panelTop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelTop.Controls.Add(this.btnClose);
-            this.panelTop.Controls.Add(this.btnMax);
-            this.panelTop.Controls.Add(this.btnMin);
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(3, 2);
-            this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1376, 89);
-            this.panelTop.TabIndex = 0;
-            this.panelTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTop_MouseDown);
-            this.panelTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTop_MouseMove);
             // 
             // panel2
             // 
@@ -151,6 +137,7 @@ namespace Z.WMS
             this.uPanel1.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
             this.uPanel1.BgColor2 = System.Drawing.Color.Transparent;
             this.uPanel1.BorderColor = System.Drawing.Color.Red;
+            this.uPanel1.Controls.Add(this.btnUserManager);
             this.uPanel1.Controls.Add(this.btnStoreTemperManage);
             this.uPanel1.Controls.Add(this.btnProductManage);
             this.uPanel1.Controls.Add(this.btnStoreManage);
@@ -160,6 +147,20 @@ namespace Z.WMS
             this.uPanel1.Radius = 8;
             this.uPanel1.Size = new System.Drawing.Size(276, 630);
             this.uPanel1.TabIndex = 1;
+            // 
+            // btnUserManager
+            // 
+            this.btnUserManager.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUserManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
+            this.btnUserManager.BtnImg = global::Z.WMS.Properties.Resources._05;
+            this.btnUserManager.BtnText = "用户管理";
+            this.btnUserManager.IsCheck = false;
+            this.btnUserManager.Location = new System.Drawing.Point(1, 202);
+            this.btnUserManager.Name = "btnUserManager";
+            this.btnUserManager.Size = new System.Drawing.Size(274, 60);
+            this.btnUserManager.TabIndex = 1;
+            this.btnUserManager.Click += new System.EventHandler(this.btnUserManager_Click);
             // 
             // btnStoreTemperManage
             // 
@@ -202,6 +203,21 @@ namespace Z.WMS
             this.btnStoreManage.Size = new System.Drawing.Size(274, 60);
             this.btnStoreManage.TabIndex = 0;
             this.btnStoreManage.Click += new System.EventHandler(this.btnStoreManage_Click);
+            // 
+            // panelTop
+            // 
+            this.panelTop.BackgroundImage = global::Z.WMS.Properties.Resources.logo;
+            this.panelTop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelTop.Controls.Add(this.btnClose);
+            this.panelTop.Controls.Add(this.btnMax);
+            this.panelTop.Controls.Add(this.btnMin);
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Location = new System.Drawing.Point(3, 2);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(1376, 89);
+            this.panelTop.TabIndex = 0;
+            this.panelTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTop_MouseDown);
+            this.panelTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTop_MouseMove);
             // 
             // btnClose
             // 
@@ -266,10 +282,10 @@ namespace Z.WMS
             this.Text = "仓库温控系统主页面";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.FormMain_Load);
-            this.panelTop.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.uPanel1.ResumeLayout(false);
+            this.panelTop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -291,6 +307,7 @@ namespace Z.WMS
         private UControls.UIconButton btnMin;
         private UControls.UMenuButton btnStoreTemperManage;
         private UControls.UMenuButton btnProductManage;
+        private UControls.UMenuButton btnUserManager;
     }
 }
 

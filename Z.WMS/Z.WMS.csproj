@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="User\FormUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\FormUserInfo.Designer.cs">
+      <DependentUpon>FormUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\FormUserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\FormUserList.Designer.cs">
+      <DependentUpon>FormUserList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utility\BttonPage.cs" />
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -209,6 +221,9 @@
     <EmbeddedResource Include="Store\FormStoreInfo.resx">
       <DependentUpon>FormStoreInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Store\FormStoreRegionList.resx">
+      <DependentUpon>FormStoreRegionList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UControls\UCircleButton.resx">
       <DependentUpon>UCircleButton.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +238,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UControls\UThermometer.resx">
       <DependentUpon>UThermometer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\FormUserInfo.resx">
+      <DependentUpon>FormUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\FormUserList.resx">
+      <DependentUpon>FormUserList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -246,6 +267,10 @@
       <Project>{7446594A-4BAF-498E-A0CB-EB010CA48F51}</Project>
       <Name>Z.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Z.DAL\Z.DAL.csproj">
+      <Project>{762EAC3C-64F9-418D-BFFC-2666CDD2A0D1}</Project>
+      <Name>Z.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Z.Models\Z.Models.csproj">
       <Project>{B33CF025-F5DA-4D6C-9246-A63E496FDE08}</Project>
       <Name>Z.Models</Name>
@@ -256,6 +281,7 @@
     <Content Include="Resources\02.png" />
     <Content Include="Resources\03.png" />
     <Content Include="Resources\04.png" />
+    <None Include="Resources\05.png" />
     <Content Include="Resources\btnbg01.png" />
     <Content Include="Resources\btnbg02.png" />
     <Content Include="Resources\btnbg03.png" />

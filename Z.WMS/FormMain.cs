@@ -132,6 +132,16 @@ namespace Z.WMS
             RegisterPageBtnClick();
         }
 
+        private void btnUserManager_Click(object sender, EventArgs e)
+        {
+            InitBtnCheck();
+            btnUserManager.IsCheck = true;
+            panelPageTop.Controls.Clear();
+            panelPageTop.Controls.Add(bttonPage.BtnUserListPage);
+            InitBtnPage();
+            RegisterPageBtnClick();
+        }
+
         /// <summary>
         /// 对侧边按钮进行初始化
         /// </summary>
@@ -143,6 +153,8 @@ namespace Z.WMS
             btnProductManage.BackColor = Color.FromArgb(45, 50, 116);
             btnStoreTemperManage.IsCheck = false;
             btnStoreTemperManage.BackColor = Color.FromArgb(45, 50, 116);
+            btnUserManager.IsCheck = false;
+            btnUserManager.BackColor = Color.FromArgb(45, 50, 116);
         }
 
         /// <summary>

@@ -39,17 +39,17 @@ namespace Z.WMS.Product
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblInfo = new System.Windows.Forms.Label();
+            this.dgvProductList = new System.Windows.Forms.DataGridView();
             this.uPanel1 = new Z.WMS.UControls.UPanel();
             this.btnRefresh = new Z.WMS.UControls.UCircleButton();
+            this.lblInfo = new System.Windows.Forms.Label();
+            this.uPanel2 = new Z.WMS.UControls.UPanel();
             this.chkShowDel = new System.Windows.Forms.CheckBox();
             this.btnDelete = new Z.WMS.UControls.UCircleButton();
             this.txtKeyWords = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnFind = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.uPanel2 = new Z.WMS.UControls.UPanel();
-            this.dgvProductList = new System.Windows.Forms.DataGridView();
             this.colChk = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,9 +60,9 @@ namespace Z.WMS.Product
             this.colDel = new System.Windows.Forms.DataGridViewLinkColumn();
             this.colRecover = new System.Windows.Forms.DataGridViewLinkColumn();
             this.colRemove = new System.Windows.Forms.DataGridViewLinkColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).BeginInit();
             this.uPanel1.SuspendLayout();
             this.uPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -74,17 +74,59 @@ namespace Z.WMS.Product
             this.label1.TabIndex = 1;
             this.label1.Text = "产品信息管理页面";
             // 
-            // lblInfo
+            // dgvProductList
             // 
-            this.lblInfo.AutoSize = true;
-            this.lblInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
-            this.lblInfo.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblInfo.ForeColor = System.Drawing.Color.White;
-            this.lblInfo.Location = new System.Drawing.Point(12, 19);
-            this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(118, 24);
-            this.lblInfo.TabIndex = 6;
-            this.lblInfo.Text = "产品管理页面";
+            this.dgvProductList.AllowUserToAddRows = false;
+            this.dgvProductList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvProductList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProductList.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvProductList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvProductList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProductList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProductList.ColumnHeadersHeight = 35;
+            this.dgvProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvProductList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colChk,
+            this.ProductId,
+            this.ProductName,
+            this.ProductNo,
+            this.FitLowTemperature,
+            this.FitHighTemperature,
+            this.colEdit,
+            this.colDel,
+            this.colRecover,
+            this.colRemove});
+            this.dgvProductList.EnableHeadersVisualStyles = false;
+            this.dgvProductList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(61)))), ((int)(((byte)(133)))));
+            this.dgvProductList.Location = new System.Drawing.Point(2, 123);
+            this.dgvProductList.Name = "dgvProductList";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProductList.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvProductList.RowHeadersWidth = 51;
+            this.dgvProductList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(145)))), ((int)(((byte)(239)))));
+            this.dgvProductList.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvProductList.RowTemplate.Height = 27;
+            this.dgvProductList.Size = new System.Drawing.Size(993, 460);
+            this.dgvProductList.TabIndex = 5;
+            this.dgvProductList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductList_CellContentClick);
             // 
             // uPanel1
             // 
@@ -125,6 +167,39 @@ namespace Z.WMS.Product
             this.btnRefresh.Text = "刷新";
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // lblInfo
+            // 
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
+            this.lblInfo.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblInfo.ForeColor = System.Drawing.Color.White;
+            this.lblInfo.Location = new System.Drawing.Point(12, 19);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(118, 24);
+            this.lblInfo.TabIndex = 6;
+            this.lblInfo.Text = "产品管理页面";
+            // 
+            // uPanel2
+            // 
+            this.uPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
+            this.uPanel2.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
+            this.uPanel2.BgColor2 = System.Drawing.Color.Transparent;
+            this.uPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
+            this.uPanel2.Controls.Add(this.chkShowDel);
+            this.uPanel2.Controls.Add(this.btnDelete);
+            this.uPanel2.Controls.Add(this.txtKeyWords);
+            this.uPanel2.Controls.Add(this.btnAdd);
+            this.uPanel2.Controls.Add(this.btnFind);
+            this.uPanel2.Controls.Add(this.label2);
+            this.uPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.uPanel2.Location = new System.Drawing.Point(4, 59);
+            this.uPanel2.Name = "uPanel2";
+            this.uPanel2.Radius = 0;
+            this.uPanel2.Size = new System.Drawing.Size(988, 58);
+            this.uPanel2.TabIndex = 4;
             // 
             // chkShowDel
             // 
@@ -216,81 +291,6 @@ namespace Z.WMS.Product
             this.label2.Size = new System.Drawing.Size(120, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "产品名称/编码：";
-            // 
-            // uPanel2
-            // 
-            this.uPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.uPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
-            this.uPanel2.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
-            this.uPanel2.BgColor2 = System.Drawing.Color.Transparent;
-            this.uPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
-            this.uPanel2.Controls.Add(this.chkShowDel);
-            this.uPanel2.Controls.Add(this.btnDelete);
-            this.uPanel2.Controls.Add(this.txtKeyWords);
-            this.uPanel2.Controls.Add(this.btnAdd);
-            this.uPanel2.Controls.Add(this.btnFind);
-            this.uPanel2.Controls.Add(this.label2);
-            this.uPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.uPanel2.Location = new System.Drawing.Point(4, 59);
-            this.uPanel2.Name = "uPanel2";
-            this.uPanel2.Radius = 0;
-            this.uPanel2.Size = new System.Drawing.Size(988, 58);
-            this.uPanel2.TabIndex = 4;
-            // 
-            // dgvProductList
-            // 
-            this.dgvProductList.AllowUserToAddRows = false;
-            this.dgvProductList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvProductList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvProductList.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dgvProductList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvProductList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(155)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvProductList.ColumnHeadersHeight = 35;
-            this.dgvProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvProductList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colChk,
-            this.ProductId,
-            this.ProductName,
-            this.ProductNo,
-            this.FitLowTemperature,
-            this.FitHighTemperature,
-            this.colEdit,
-            this.colDel,
-            this.colRecover,
-            this.colRemove});
-            this.dgvProductList.EnableHeadersVisualStyles = false;
-            this.dgvProductList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(61)))), ((int)(((byte)(133)))));
-            this.dgvProductList.Location = new System.Drawing.Point(2, 123);
-            this.dgvProductList.Name = "dgvProductList";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductList.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvProductList.RowHeadersWidth = 51;
-            this.dgvProductList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(145)))), ((int)(((byte)(239)))));
-            this.dgvProductList.RowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvProductList.RowTemplate.Height = 27;
-            this.dgvProductList.Size = new System.Drawing.Size(993, 460);
-            this.dgvProductList.TabIndex = 5;
-            this.dgvProductList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductList_CellContentClick);
             // 
             // colChk
             // 
@@ -407,11 +407,11 @@ namespace Z.WMS.Product
             this.ShowIcon = false;
             this.Text = "产品信息管理页面";
             this.Load += new System.EventHandler(this.FormProductList_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).EndInit();
             this.uPanel1.ResumeLayout(false);
             this.uPanel1.PerformLayout();
             this.uPanel2.ResumeLayout(false);
             this.uPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -431,15 +431,15 @@ namespace Z.WMS.Product
         private System.Windows.Forms.Label label2;
         private UControls.UPanel uPanel2;
         private System.Windows.Forms.DataGridView dgvProductList;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn colChk;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FitLowTemperature;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FitHighTemperature;
-        private System.Windows.Forms.DataGridViewLinkColumn colEdit;
-        private System.Windows.Forms.DataGridViewLinkColumn colDel;
-        private System.Windows.Forms.DataGridViewLinkColumn colRecover;
-        private System.Windows.Forms.DataGridViewLinkColumn colRemove;
+        private DataGridViewCheckBoxColumn colChk;
+        private DataGridViewTextBoxColumn ProductId;
+        private DataGridViewTextBoxColumn ProductName;
+        private DataGridViewTextBoxColumn ProductNo;
+        private DataGridViewTextBoxColumn FitLowTemperature;
+        private DataGridViewTextBoxColumn FitHighTemperature;
+        private DataGridViewLinkColumn colEdit;
+        private DataGridViewLinkColumn colDel;
+        private DataGridViewLinkColumn colRecover;
+        private DataGridViewLinkColumn colRemove;
     }
 }

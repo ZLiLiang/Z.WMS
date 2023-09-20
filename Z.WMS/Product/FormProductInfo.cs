@@ -45,16 +45,11 @@ namespace Z.WMS.Product
             string proNo = txtProductNo.Text.Trim();
             string proName = txtProductName.Text.Trim();
             decimal? lowTemper = null;
-            decimal? highTemper = null;
-
             if (!string.IsNullOrEmpty(txtLowTemper.Text))
-            {
                 lowTemper = txtLowTemper.Text.GetDecimal();
-            }
+            decimal? highTemper = null;
             if (!string.IsNullOrEmpty(txtHighTemper.Text))
-            {
                 highTemper = txtHighTemper.Text.GetDecimal();
-            }
 
             //判断
             if (string.IsNullOrEmpty(proName))
@@ -70,23 +65,16 @@ namespace Z.WMS.Product
                 if (productId > 0)
                 {
                     if (oldName == proName)
-                    {
                         intBl = proBLL.ExistsProduct("", proNo);
-                    }
                     else if (oldNo == proNo)
-                    {
                         intBl = proBLL.ExistsProduct(proName, "");
-                    }
                     else
-                    {
                         intBl = proBLL.ExistsProduct(proName, proNo);
-                    }
                 }
                 else
                 {
                     intBl = proBLL.ExistsProduct(proName, proNo);
                 }
-
                 switch (intBl)
                 {
                     case 0://都不存在
@@ -102,74 +90,71 @@ namespace Z.WMS.Product
                         break;
                 }
                 if (intBl > 0)
-                {
                     return;
-                }
+            }
+            //温度值检查
+            if (lowTemper == null)
+            {
+                MsgBoxHelper.MsgErrorShow(msgTitle, "请设置产品的适合低温值！");
+                txtLowTemper.Focus();
+                return;
+            }
+            else if (highTemper == null)
+            {
+                MsgBoxHelper.MsgErrorShow(msgTitle, "请设置产品的适合高温值！");
+                txtHighTemper.Focus();
+                return;
+            }
+            else if (lowTemper != null && highTemper != null && lowTemper > highTemper)
+            {
+                MsgBoxHelper.MsgErrorShow(msgTitle, "产品的适合低温值不能高于高温值！");
+                txtLowTemper.Focus();
+                return;
+            }
+            //封装信息
+            ProductInfo proInfo = new ProductInfo()
+            {
+                ProductId = productId,
+                ProductName = proName,
+                ProductNo = proNo,
+                FitHighTemper = highTemper,
+                FitLowTemper = lowTemper
+            };
 
-                //温度值检查
-                if (lowTemper == null)
+            //提交   ---   //做出响应
+            if (actType == 1)
+            {
+                int productNewId = proBLL.AddProductInfoWithId(proInfo);
+                if (productNewId > 0)
                 {
-                    MsgBoxHelper.MsgErrorShow(msgTitle, "请设置产品的适合低温值！");
-                    txtLowTemper.Focus();
-                    return;
-                }
-                else if (highTemper == null)
-                {
-                    MsgBoxHelper.MsgErrorShow(msgTitle, "请设置产品的适合高温值！");
-                    txtHighTemper.Focus();
-                    return;
-                }
-                else if (lowTemper != null && highTemper != null && lowTemper > highTemper)
-                {
-                    MsgBoxHelper.MsgErrorShow(msgTitle, "产品的适合低温值不能高于高温值！");
-                    txtLowTemper.Focus();
-                    return;
-                }
-                //封装信息
-                ProductInfo proInfo = new ProductInfo()
-                {
-                    ProductId = productId,
-                    ProductName = proName,
-                    ProductNo = proNo,
-                    FitHighTemper = highTemper,
-                    FitLowTemper = lowTemper
-                };
-
-                //提交   ---   //做出响应
-                if (actType == 1)
-                {
-                    int productNewId = proBLL.AddProductInfoWithId(proInfo);
-                    if (productNewId > 0)
-                    {
-                        MsgBoxHelper.MsgBoxShow(msgTitle, $"产品：{proName}信息新增成功！");
-                        //页面转换到修改状态
-                        productId = productNewId;
-                        actType = 2;
-                        oldName = proName;
-                        oldNo = proNo;
-                        ReloadList?.Invoke();//刷新列表页
-                    }
-                    else
-                    {
-                        MsgBoxHelper.MsgErrorShow(msgTitle, $"产品：{proName}信息新增失败！");
-                        return;
-                    }
+                    MsgBoxHelper.MsgBoxShow(msgTitle, $"产品：{proName}信息新增成功！");
+                    //页面转换到修改状态
+                    productId = productNewId;
+                    actType = 2;
+                    oldName = proName;
+                    oldNo = proNo;
+                    ReloadList?.Invoke();//刷新列表页
                 }
                 else
                 {
-                    bool bl = proBLL.UpdateProductInfo(proInfo);
-                    if (bl)
-                    {
-                        MsgBoxHelper.MsgBoxShow(msgTitle, $"产品：{proName}信息修改成功！");
-                        oldName = proName;
-                        oldNo = proNo;
-                        ReloadList?.Invoke();
-                    }
-                    else
-                    {
-                        MsgBoxHelper.MsgErrorShow(msgTitle, $"产品：{proName}信息修改失败！");
-                        return;
-                    }
+                    MsgBoxHelper.MsgErrorShow(msgTitle, $"产品：{proName}信息新增失败！");
+                    return;
+                }
+            }
+            else
+            {
+                bool bl = proBLL.UpdateProductInfo(proInfo);
+                if (bl)
+                {
+                    MsgBoxHelper.MsgBoxShow(msgTitle, $"产品：{proName}信息修改成功！");
+                    oldName = proName;
+                    oldNo = proNo;
+                    ReloadList?.Invoke();
+                }
+                else
+                {
+                    MsgBoxHelper.MsgErrorShow(msgTitle, $"产品：{proName}信息修改失败！");
+                    return;
                 }
             }
         }
@@ -237,6 +222,12 @@ namespace Z.WMS.Product
             actType = 1;
             oldName = "";
             oldNo = "";
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
         }
     }
 }
