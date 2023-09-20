@@ -10,17 +10,18 @@ using Z.WMS.Properties;
 using Z.WMS.Store;
 using Z.WMS.StoreTemper;
 using Z.WMS.UControls;
+using Z.WMS.User;
 
 namespace Z.WMS
 {
     public class BttonPage
     {
-        private ComponentResourceManager resources = new ComponentResourceManager(typeof(FormMain));
         private UPageButton btnStorePage;
         private UPageButton btnSRegionPage;
         private UPageButton btnProductInStorePage;
         private UPageButton btnProductPage;
         private UPageButton btnStoreTemperPage;
+        private UPageButton btnUserListPage;
 
         public BttonPage()
         {
@@ -29,6 +30,7 @@ namespace Z.WMS
             BuildBtnProductInStorePage();
             BuildBtnProductPage();
             BuildBtnStoreTemperPage();
+            BuildBtnUserListPage();
         }
 
         public UPageButton BtnStorePage
@@ -50,6 +52,11 @@ namespace Z.WMS
         public UPageButton BtnStoreTemperPage
         {
             get => btnStoreTemperPage;
+        }
+
+        public UPageButton BtnUserListPage
+        {
+            get => btnUserListPage;
         }
 
         #region 构建按钮
@@ -122,6 +129,20 @@ namespace Z.WMS
             btnStoreTemperPage.Size = new System.Drawing.Size(165, 40);
             btnStoreTemperPage.TabIndex = 1;
             btnStoreTemperPage.Tag = typeof(FormStoreRegionTemperatureList).FullName;
+        }
+
+        private void BuildBtnUserListPage()
+        {
+            btnUserListPage = new UPageButton();
+            btnUserListPage.BackColor = System.Drawing.Color.Transparent;
+            btnUserListPage.BackgroundImage = Resources.btnbg05;
+            btnUserListPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            btnUserListPage.BtnText = "用户管理页面";
+            btnUserListPage.Location = new System.Drawing.Point(3, -1);
+            btnUserListPage.Name = "btnUserListPage";
+            btnUserListPage.Size = new System.Drawing.Size(165, 40);
+            btnUserListPage.TabIndex = 0;
+            btnUserListPage.Tag = typeof(FormUserList).FullName;
         }
 
         #endregion

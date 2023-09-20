@@ -25,13 +25,13 @@ namespace Z.DAL.Base
             string priName = type.GetPrimary();//获取主键名   标识列（不需要显式插入）
                                                //生成要插入的列 {1}  insert into table (Id,Name,Age....) values (@Id,@Name,@Age)
 
-            string columns = string.Join(",", properties.Where(p => p.Name != priName).Select(p => $"[{p.GetColName()}]"));
+            string columns = string.Join(",", properties.Where(p => p.Name != priName).Select(p => $"{p.GetColName()}"));
             //生成插入的参数{2}
             string paraColumns = string.Join(",", properties.Where(p => p.Name != priName).Select(p => $"@{p.GetColName()}"));
             //参数数组的生成
             SqlParameter[] arrParas = CreateParameters<T>(properties, t);
             //sql语句
-            string sql = $"INSERT INTO [{type.GetTName()} ({columns}) VALUES ({paraColumns})]";
+            string sql = $"INSERT INTO {type.GetTName()} ({columns}) VALUES ({paraColumns})";
             if (isReturn == 1)
             {
                 sql += ";select @@identity";

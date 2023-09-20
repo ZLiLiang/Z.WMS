@@ -31,5 +31,39 @@ namespace Z.DAL
             else
                 return 0;
         }
+
+        /// <summary>
+        /// 查询所有用户
+        /// </summary>
+        /// <returns></returns>
+        public List<UserInfo> GetUserInfos()
+        {
+            List<UserInfo> userInfos = GetModelList("UserId,UserName,UserPwd,UserState,IsDeleted", 0);
+            return userInfos;
+        }
+
+        /// <summary>
+        /// 添加用户信息
+        /// </summary>
+        /// <param name="userInfo"></param>
+        /// <param name="IsGetId">0 不返回 1 返回   id</param>
+        /// <returns></returns>
+        public int AddUserInfo(UserInfo userInfo, int IsGetId)
+        {
+            string cols = "UserName,UserPwd,UserState,IsDeleted";
+            return base.Add(userInfo, cols, IsGetId);
+
+        }
+
+        /// <summary>
+        /// 更新用户信息
+        /// </summary>
+        /// <param name="userInfo"></param>
+        /// <returns></returns>
+        public bool UpdateUserInfo(UserInfo userInfo)
+        {
+            string cols = CreateSql.GetColsString<UserInfo>("IsDeleted");
+            return base.Update(userInfo, cols);
+        }
     }
 }
