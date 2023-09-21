@@ -39,5 +39,16 @@ namespace Z.DAL
                 list = base.GetModelList(strWhere, cols);
             return list;
         }
+
+        /// <summary>
+        /// 查询所有仓库分区
+        /// </summary>
+        /// <returns></returns>
+        public List<ViewStoreRegionInfo> GetAllStoreRegionList()
+        {
+            string strWhere = "1=1";
+            string cols = CreateSql.GetColsString<ViewStoreRegionInfo>("TemperState,IsDeleted");
+            return base.GetModelList(strWhere, cols);
+        }
     }
 }
