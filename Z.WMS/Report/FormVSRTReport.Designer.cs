@@ -28,15 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uPanel1 = new Z.WMS.UControls.UPanel();
             this.lblInfo = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.uPanel2 = new Z.WMS.UControls.UPanel();
             this.btnExportExcel = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.dgvVPSList = new System.Windows.Forms.DataGridView();
+            this.StoreId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SRegionId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SRegionName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SRTemperature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AllowLowTemperature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AllowHighTemperature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.uPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVPSList)).BeginInit();
             this.SuspendLayout();
             // 
             // uPanel1
@@ -66,17 +76,6 @@
             this.lblInfo.Size = new System.Drawing.Size(154, 24);
             this.lblInfo.TabIndex = 0;
             this.lblInfo.Text = "仓库分区温度报表";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(61)))), ((int)(((byte)(133)))));
-            this.dataGridView1.Location = new System.Drawing.Point(2, 122);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(993, 460);
-            this.dataGridView1.TabIndex = 1;
             // 
             // uPanel2
             // 
@@ -122,14 +121,112 @@
             this.btnRefresh.Text = "刷新";
             this.btnRefresh.UseVisualStyleBackColor = false;
             // 
+            // dgvVPSList
+            // 
+            this.dgvVPSList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvVPSList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvVPSList.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvVPSList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvVPSList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVPSList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvVPSList.ColumnHeadersHeight = 29;
+            this.dgvVPSList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvVPSList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.StoreId,
+            this.SRegionId,
+            this.SRegionName,
+            this.SRTemperature,
+            this.AllowLowTemperature,
+            this.AllowHighTemperature,
+            this.TotalCount});
+            this.dgvVPSList.EnableHeadersVisualStyles = false;
+            this.dgvVPSList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(61)))), ((int)(((byte)(133)))));
+            this.dgvVPSList.Location = new System.Drawing.Point(2, 123);
+            this.dgvVPSList.Name = "dgvVPSList";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVPSList.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvVPSList.RowHeadersWidth = 51;
+            this.dgvVPSList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(145)))), ((int)(((byte)(239)))));
+            this.dgvVPSList.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvVPSList.RowTemplate.Height = 27;
+            this.dgvVPSList.Size = new System.Drawing.Size(993, 460);
+            this.dgvVPSList.TabIndex = 6;
+            // 
+            // StoreId
+            // 
+            this.StoreId.DataPropertyName = "StoreId";
+            this.StoreId.HeaderText = "仓库标识";
+            this.StoreId.MinimumWidth = 6;
+            this.StoreId.Name = "StoreId";
+            // 
+            // SRegionId
+            // 
+            this.SRegionId.DataPropertyName = "SRegionId";
+            this.SRegionId.HeaderText = "仓库区域标识";
+            this.SRegionId.MinimumWidth = 6;
+            this.SRegionId.Name = "SRegionId";
+            // 
+            // SRegionName
+            // 
+            this.SRegionName.DataPropertyName = "SRegionName";
+            this.SRegionName.HeaderText = "仓库区域名称";
+            this.SRegionName.MinimumWidth = 6;
+            this.SRegionName.Name = "SRegionName";
+            // 
+            // SRTemperature
+            // 
+            this.SRTemperature.DataPropertyName = "SRTemperature";
+            this.SRTemperature.HeaderText = "仓库区域温度";
+            this.SRTemperature.MinimumWidth = 6;
+            this.SRTemperature.Name = "SRTemperature";
+            // 
+            // AllowLowTemperature
+            // 
+            this.AllowLowTemperature.DataPropertyName = "AllowLowTemperature";
+            this.AllowLowTemperature.HeaderText = "最低温度线";
+            this.AllowLowTemperature.MinimumWidth = 6;
+            this.AllowLowTemperature.Name = "AllowLowTemperature";
+            // 
+            // AllowHighTemperature
+            // 
+            this.AllowHighTemperature.DataPropertyName = "AllowHighTemperature";
+            this.AllowHighTemperature.HeaderText = "最高温度线";
+            this.AllowHighTemperature.MinimumWidth = 6;
+            this.AllowHighTemperature.Name = "AllowHighTemperature";
+            // 
+            // TotalCount
+            // 
+            this.TotalCount.DataPropertyName = "TotalCount";
+            this.TotalCount.HeaderText = "总数";
+            this.TotalCount.MinimumWidth = 6;
+            this.TotalCount.Name = "TotalCount";
+            // 
             // FormVSRTReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(61)))), ((int)(((byte)(133)))));
             this.ClientSize = new System.Drawing.Size(996, 585);
+            this.Controls.Add(this.dgvVPSList);
             this.Controls.Add(this.uPanel2);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.uPanel1);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(996, 585);
@@ -138,8 +235,8 @@
             this.Text = "仓库分区温度报表页面";
             this.uPanel1.ResumeLayout(false);
             this.uPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.uPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVPSList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -147,10 +244,17 @@
         #endregion
 
         private UControls.UPanel uPanel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblInfo;
         private UControls.UPanel uPanel2;
         private System.Windows.Forms.Button btnExportExcel;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.DataGridView dgvVPSList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StoreId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SRegionId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SRegionName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SRTemperature;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AllowLowTemperature;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AllowHighTemperature;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalCount;
     }
 }

@@ -40,16 +40,6 @@ namespace Z.WMS.Product
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvProductList = new System.Windows.Forms.DataGridView();
-            this.uPanel1 = new Z.WMS.UControls.UPanel();
-            this.btnRefresh = new Z.WMS.UControls.UCircleButton();
-            this.lblInfo = new System.Windows.Forms.Label();
-            this.uPanel2 = new Z.WMS.UControls.UPanel();
-            this.chkShowDel = new System.Windows.Forms.CheckBox();
-            this.btnDelete = new Z.WMS.UControls.UCircleButton();
-            this.txtKeyWords = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnFind = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.colChk = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +50,16 @@ namespace Z.WMS.Product
             this.colDel = new System.Windows.Forms.DataGridViewLinkColumn();
             this.colRecover = new System.Windows.Forms.DataGridViewLinkColumn();
             this.colRemove = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.uPanel1 = new Z.WMS.UControls.UPanel();
+            this.btnRefresh = new Z.WMS.UControls.UCircleButton();
+            this.lblInfo = new System.Windows.Forms.Label();
+            this.uPanel2 = new Z.WMS.UControls.UPanel();
+            this.chkShowDel = new System.Windows.Forms.CheckBox();
+            this.btnDelete = new Z.WMS.UControls.UCircleButton();
+            this.txtKeyWords = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnFind = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).BeginInit();
             this.uPanel1.SuspendLayout();
             this.uPanel2.SuspendLayout();
@@ -127,6 +127,107 @@ namespace Z.WMS.Product
             this.dgvProductList.Size = new System.Drawing.Size(993, 460);
             this.dgvProductList.TabIndex = 5;
             this.dgvProductList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductList_CellContentClick);
+            // 
+            // colChk
+            // 
+            this.colChk.FillWeight = 60F;
+            this.colChk.HeaderText = "选择";
+            this.colChk.MinimumWidth = 6;
+            this.colChk.Name = "colChk";
+            // 
+            // ProductId
+            // 
+            this.ProductId.DataPropertyName = "ProductId";
+            this.ProductId.FillWeight = 60F;
+            this.ProductId.HeaderText = "编号";
+            this.ProductId.MinimumWidth = 6;
+            this.ProductId.Name = "ProductId";
+            this.ProductId.ReadOnly = true;
+            // 
+            // ProductName
+            // 
+            this.ProductName.DataPropertyName = "ProductName";
+            this.ProductName.FillWeight = 150F;
+            this.ProductName.HeaderText = "产品名称";
+            this.ProductName.MinimumWidth = 6;
+            this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
+            // 
+            // ProductNo
+            // 
+            this.ProductNo.DataPropertyName = "ProductNo";
+            this.ProductNo.HeaderText = "产品编码";
+            this.ProductNo.MinimumWidth = 6;
+            this.ProductNo.Name = "ProductNo";
+            this.ProductNo.ReadOnly = true;
+            // 
+            // FitLowTemperature
+            // 
+            this.FitLowTemperature.DataPropertyName = "FitLowTemper";
+            this.FitLowTemperature.HeaderText = "适合低温";
+            this.FitLowTemperature.MinimumWidth = 6;
+            this.FitLowTemperature.Name = "FitLowTemperature";
+            this.FitLowTemperature.ReadOnly = true;
+            // 
+            // FitHighTemperature
+            // 
+            this.FitHighTemperature.DataPropertyName = "FitHighTemper";
+            this.FitHighTemperature.HeaderText = "适合高温";
+            this.FitHighTemperature.MinimumWidth = 6;
+            this.FitHighTemperature.Name = "FitHighTemperature";
+            this.FitHighTemperature.ReadOnly = true;
+            // 
+            // colEdit
+            // 
+            this.colEdit.ActiveLinkColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.NullValue = "修改";
+            this.colEdit.DefaultCellStyle = dataGridViewCellStyle2;
+            this.colEdit.FillWeight = 60F;
+            this.colEdit.HeaderText = "修改";
+            this.colEdit.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.colEdit.MinimumWidth = 6;
+            this.colEdit.Name = "colEdit";
+            this.colEdit.TrackVisitedState = false;
+            // 
+            // colDel
+            // 
+            this.colDel.ActiveLinkColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.NullValue = "删除";
+            this.colDel.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colDel.FillWeight = 60F;
+            this.colDel.HeaderText = "删除";
+            this.colDel.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.colDel.MinimumWidth = 6;
+            this.colDel.Name = "colDel";
+            this.colDel.TrackVisitedState = false;
+            // 
+            // colRecover
+            // 
+            this.colRecover.ActiveLinkColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.NullValue = "恢复";
+            this.colRecover.DefaultCellStyle = dataGridViewCellStyle4;
+            this.colRecover.FillWeight = 60F;
+            this.colRecover.HeaderText = "恢复";
+            this.colRecover.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.colRecover.MinimumWidth = 6;
+            this.colRecover.Name = "colRecover";
+            this.colRecover.TrackVisitedState = false;
+            // 
+            // colRemove
+            // 
+            this.colRemove.ActiveLinkColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.NullValue = "移除";
+            this.colRemove.DefaultCellStyle = dataGridViewCellStyle5;
+            this.colRemove.FillWeight = 60F;
+            this.colRemove.HeaderText = "移除";
+            this.colRemove.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.colRemove.MinimumWidth = 6;
+            this.colRemove.Name = "colRemove";
+            this.colRemove.TrackVisitedState = false;
             // 
             // uPanel1
             // 
@@ -291,107 +392,6 @@ namespace Z.WMS.Product
             this.label2.Size = new System.Drawing.Size(120, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "产品名称/编码：";
-            // 
-            // colChk
-            // 
-            this.colChk.FillWeight = 60F;
-            this.colChk.HeaderText = "选择";
-            this.colChk.MinimumWidth = 6;
-            this.colChk.Name = "colChk";
-            // 
-            // ProductId
-            // 
-            this.ProductId.DataPropertyName = "ProductId";
-            this.ProductId.FillWeight = 60F;
-            this.ProductId.HeaderText = "编号";
-            this.ProductId.MinimumWidth = 6;
-            this.ProductId.Name = "ProductId";
-            this.ProductId.ReadOnly = true;
-            // 
-            // ProductName
-            // 
-            this.ProductName.DataPropertyName = "ProductName";
-            this.ProductName.FillWeight = 150F;
-            this.ProductName.HeaderText = "产品名称";
-            this.ProductName.MinimumWidth = 6;
-            this.ProductName.Name = "ProductName";
-            this.ProductName.ReadOnly = true;
-            // 
-            // ProductNo
-            // 
-            this.ProductNo.DataPropertyName = "ProductNo";
-            this.ProductNo.HeaderText = "产品编码";
-            this.ProductNo.MinimumWidth = 6;
-            this.ProductNo.Name = "ProductNo";
-            this.ProductNo.ReadOnly = true;
-            // 
-            // FitLowTemperature
-            // 
-            this.FitLowTemperature.DataPropertyName = "FitLowTemper";
-            this.FitLowTemperature.HeaderText = "适合低温";
-            this.FitLowTemperature.MinimumWidth = 6;
-            this.FitLowTemperature.Name = "FitLowTemperature";
-            this.FitLowTemperature.ReadOnly = true;
-            // 
-            // FitHighTemperature
-            // 
-            this.FitHighTemperature.DataPropertyName = "FitHighTemper";
-            this.FitHighTemperature.HeaderText = "适合高温";
-            this.FitHighTemperature.MinimumWidth = 6;
-            this.FitHighTemperature.Name = "FitHighTemperature";
-            this.FitHighTemperature.ReadOnly = true;
-            // 
-            // colEdit
-            // 
-            this.colEdit.ActiveLinkColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.NullValue = "修改";
-            this.colEdit.DefaultCellStyle = dataGridViewCellStyle2;
-            this.colEdit.FillWeight = 60F;
-            this.colEdit.HeaderText = "修改";
-            this.colEdit.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.colEdit.MinimumWidth = 6;
-            this.colEdit.Name = "colEdit";
-            this.colEdit.TrackVisitedState = false;
-            // 
-            // colDel
-            // 
-            this.colDel.ActiveLinkColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.NullValue = "删除";
-            this.colDel.DefaultCellStyle = dataGridViewCellStyle3;
-            this.colDel.FillWeight = 60F;
-            this.colDel.HeaderText = "删除";
-            this.colDel.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.colDel.MinimumWidth = 6;
-            this.colDel.Name = "colDel";
-            this.colDel.TrackVisitedState = false;
-            // 
-            // colRecover
-            // 
-            this.colRecover.ActiveLinkColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.NullValue = "恢复";
-            this.colRecover.DefaultCellStyle = dataGridViewCellStyle4;
-            this.colRecover.FillWeight = 60F;
-            this.colRecover.HeaderText = "恢复";
-            this.colRecover.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.colRecover.MinimumWidth = 6;
-            this.colRecover.Name = "colRecover";
-            this.colRecover.TrackVisitedState = false;
-            // 
-            // colRemove
-            // 
-            this.colRemove.ActiveLinkColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle5.NullValue = "移除";
-            this.colRemove.DefaultCellStyle = dataGridViewCellStyle5;
-            this.colRemove.FillWeight = 60F;
-            this.colRemove.HeaderText = "移除";
-            this.colRemove.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.colRemove.MinimumWidth = 6;
-            this.colRemove.Name = "colRemove";
-            this.colRemove.TrackVisitedState = false;
             // 
             // FormProductList
             // 

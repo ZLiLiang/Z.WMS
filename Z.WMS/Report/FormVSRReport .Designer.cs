@@ -28,15 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uPanel1 = new Z.WMS.UControls.UPanel();
             this.lblInfo = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.uPanel2 = new Z.WMS.UControls.UPanel();
             this.btnExportExcel = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.dgvVSRList = new System.Windows.Forms.DataGridView();
+            this.StoreName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StoreId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SRegionId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SRegionName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SRegionNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SRTemperature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AllowLowTemperature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AllowHighTemperature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TemperStateText = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.uPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVSRList)).BeginInit();
             this.SuspendLayout();
             // 
             // uPanel1
@@ -66,17 +79,6 @@
             this.lblInfo.Size = new System.Drawing.Size(118, 24);
             this.lblInfo.TabIndex = 0;
             this.lblInfo.Text = "仓库分区报表";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(61)))), ((int)(((byte)(133)))));
-            this.dataGridView1.Location = new System.Drawing.Point(2, 122);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(993, 460);
-            this.dataGridView1.TabIndex = 1;
             // 
             // uPanel2
             // 
@@ -122,14 +124,136 @@
             this.btnRefresh.Text = "刷新";
             this.btnRefresh.UseVisualStyleBackColor = false;
             // 
+            // dgvVSRList
+            // 
+            this.dgvVSRList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvVSRList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvVSRList.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvVSRList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvVSRList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVSRList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvVSRList.ColumnHeadersHeight = 29;
+            this.dgvVSRList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvVSRList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.StoreName,
+            this.StoreId,
+            this.SRegionId,
+            this.SRegionName,
+            this.SRegionNo,
+            this.SRTemperature,
+            this.AllowLowTemperature,
+            this.AllowHighTemperature,
+            this.TemperStateText,
+            this.Remark});
+            this.dgvVSRList.EnableHeadersVisualStyles = false;
+            this.dgvVSRList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(61)))), ((int)(((byte)(133)))));
+            this.dgvVSRList.Location = new System.Drawing.Point(2, 123);
+            this.dgvVSRList.Name = "dgvVSRList";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVSRList.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvVSRList.RowHeadersWidth = 51;
+            this.dgvVSRList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(145)))), ((int)(((byte)(239)))));
+            this.dgvVSRList.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvVSRList.RowTemplate.Height = 27;
+            this.dgvVSRList.Size = new System.Drawing.Size(993, 460);
+            this.dgvVSRList.TabIndex = 6;
+            // 
+            // StoreName
+            // 
+            this.StoreName.DataPropertyName = "StoreName";
+            this.StoreName.HeaderText = "仓库名称";
+            this.StoreName.MinimumWidth = 6;
+            this.StoreName.Name = "StoreName";
+            // 
+            // StoreId
+            // 
+            this.StoreId.DataPropertyName = "StoreId";
+            this.StoreId.HeaderText = "仓库标识";
+            this.StoreId.MinimumWidth = 6;
+            this.StoreId.Name = "StoreId";
+            // 
+            // SRegionId
+            // 
+            this.SRegionId.DataPropertyName = "SRegionId";
+            this.SRegionId.HeaderText = "仓库区域标识";
+            this.SRegionId.MinimumWidth = 6;
+            this.SRegionId.Name = "SRegionId";
+            // 
+            // SRegionName
+            // 
+            this.SRegionName.DataPropertyName = "SRegionName";
+            this.SRegionName.HeaderText = "仓库区域名字";
+            this.SRegionName.MinimumWidth = 6;
+            this.SRegionName.Name = "SRegionName";
+            // 
+            // SRegionNo
+            // 
+            this.SRegionNo.DataPropertyName = "SRegionNo";
+            this.SRegionNo.HeaderText = "仓库区域编号";
+            this.SRegionNo.MinimumWidth = 6;
+            this.SRegionNo.Name = "SRegionNo";
+            // 
+            // SRTemperature
+            // 
+            this.SRTemperature.DataPropertyName = "SRTemperature";
+            this.SRTemperature.HeaderText = "仓库区域温度";
+            this.SRTemperature.MinimumWidth = 6;
+            this.SRTemperature.Name = "SRTemperature";
+            // 
+            // AllowLowTemperature
+            // 
+            this.AllowLowTemperature.DataPropertyName = "AllowLowTemperature";
+            this.AllowLowTemperature.HeaderText = "最低温度线";
+            this.AllowLowTemperature.MinimumWidth = 6;
+            this.AllowLowTemperature.Name = "AllowLowTemperature";
+            // 
+            // AllowHighTemperature
+            // 
+            this.AllowHighTemperature.DataPropertyName = "AllowHighTemperature";
+            this.AllowHighTemperature.HeaderText = "最高温度线";
+            this.AllowHighTemperature.MinimumWidth = 6;
+            this.AllowHighTemperature.Name = "AllowHighTemperature";
+            // 
+            // TemperStateText
+            // 
+            this.TemperStateText.DataPropertyName = "TemperStateText";
+            this.TemperStateText.HeaderText = "温度状态";
+            this.TemperStateText.MinimumWidth = 6;
+            this.TemperStateText.Name = "TemperStateText";
+            // 
+            // Remark
+            // 
+            this.Remark.DataPropertyName = "Remark";
+            this.Remark.HeaderText = "注释";
+            this.Remark.MinimumWidth = 6;
+            this.Remark.Name = "Remark";
+            // 
             // FormVSRReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(61)))), ((int)(((byte)(133)))));
             this.ClientSize = new System.Drawing.Size(996, 585);
+            this.Controls.Add(this.dgvVSRList);
             this.Controls.Add(this.uPanel2);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.uPanel1);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(996, 585);
@@ -138,8 +262,8 @@
             this.Text = "仓库分区报表页面";
             this.uPanel1.ResumeLayout(false);
             this.uPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.uPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVSRList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -147,10 +271,20 @@
         #endregion
 
         private UControls.UPanel uPanel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblInfo;
         private UControls.UPanel uPanel2;
         private System.Windows.Forms.Button btnExportExcel;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.DataGridView dgvVSRList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StoreName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StoreId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SRegionId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SRegionName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SRegionNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SRTemperature;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AllowLowTemperature;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AllowHighTemperature;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TemperStateText;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Remark;
     }
 }
