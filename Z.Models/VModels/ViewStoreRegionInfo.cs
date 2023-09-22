@@ -7,10 +7,10 @@ namespace Z.Models.VModels
     [PrimaryKey("SRegionId")]
     public class ViewStoreRegionInfo : StoreRegionInfo
     {
-        [Column("仓库名称")]
+        [Alias("仓库名称")]
         public string StoreName { get; set; }
 
-        [Column("温度状态")]
+        [Alias("温度状态")]
         public string TemperStateText { get; set; }
     }
 }
