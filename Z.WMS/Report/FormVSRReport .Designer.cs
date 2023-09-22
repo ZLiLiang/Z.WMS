@@ -31,11 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.uPanel1 = new Z.WMS.UControls.UPanel();
-            this.lblInfo = new System.Windows.Forms.Label();
-            this.uPanel2 = new Z.WMS.UControls.UPanel();
-            this.btnExportExcel = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.dgvVSRList = new System.Windows.Forms.DataGridView();
             this.StoreName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StoreId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,89 +42,23 @@
             this.AllowHighTemperature = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TemperStateText = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Remark = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uPanel1.SuspendLayout();
-            this.uPanel2.SuspendLayout();
+            this.uPanel2 = new Z.WMS.UControls.UPanel();
+            this.btnExportExcel = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.uPanel1 = new Z.WMS.UControls.UPanel();
+            this.lblInfo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVSRList)).BeginInit();
+            this.uPanel2.SuspendLayout();
+            this.uPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // uPanel1
-            // 
-            this.uPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.uPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.uPanel1.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
-            this.uPanel1.BgColor2 = System.Drawing.Color.Transparent;
-            this.uPanel1.BorderColor = System.Drawing.Color.Red;
-            this.uPanel1.Controls.Add(this.lblInfo);
-            this.uPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.uPanel1.Location = new System.Drawing.Point(0, 0);
-            this.uPanel1.Name = "uPanel1";
-            this.uPanel1.Radius = 5;
-            this.uPanel1.Size = new System.Drawing.Size(996, 60);
-            this.uPanel1.TabIndex = 0;
-            // 
-            // lblInfo
-            // 
-            this.lblInfo.AutoSize = true;
-            this.lblInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
-            this.lblInfo.Font = new System.Drawing.Font("微软雅黑", 10.8F);
-            this.lblInfo.ForeColor = System.Drawing.Color.White;
-            this.lblInfo.Location = new System.Drawing.Point(12, 19);
-            this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(118, 24);
-            this.lblInfo.TabIndex = 0;
-            this.lblInfo.Text = "仓库分区报表";
-            // 
-            // uPanel2
-            // 
-            this.uPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.uPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
-            this.uPanel2.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
-            this.uPanel2.BgColor2 = System.Drawing.Color.Transparent;
-            this.uPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
-            this.uPanel2.Controls.Add(this.btnExportExcel);
-            this.uPanel2.Controls.Add(this.btnRefresh);
-            this.uPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.uPanel2.Location = new System.Drawing.Point(4, 58);
-            this.uPanel2.Name = "uPanel2";
-            this.uPanel2.Radius = 5;
-            this.uPanel2.Size = new System.Drawing.Size(988, 58);
-            this.uPanel2.TabIndex = 2;
-            // 
-            // btnExportExcel
-            // 
-            this.btnExportExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(103)))), ((int)(((byte)(246)))));
-            this.btnExportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportExcel.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.btnExportExcel.ForeColor = System.Drawing.Color.White;
-            this.btnExportExcel.Location = new System.Drawing.Point(116, 15);
-            this.btnExportExcel.Name = "btnExportExcel";
-            this.btnExportExcel.Size = new System.Drawing.Size(75, 30);
-            this.btnExportExcel.TabIndex = 1;
-            this.btnExportExcel.Text = "导出";
-            this.btnExportExcel.UseVisualStyleBackColor = false;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(103)))), ((int)(((byte)(246)))));
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(26, 15);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 30);
-            this.btnRefresh.TabIndex = 0;
-            this.btnRefresh.Text = "刷新";
-            this.btnRefresh.UseVisualStyleBackColor = false;
             // 
             // dgvVSRList
             // 
             this.dgvVSRList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvVSRList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvVSRList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvVSRList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvVSRList.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvVSRList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvVSRList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -139,7 +68,7 @@
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(155)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvVSRList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvVSRList.ColumnHeadersHeight = 29;
             this.dgvVSRList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
@@ -182,6 +111,7 @@
             this.StoreName.HeaderText = "仓库名称";
             this.StoreName.MinimumWidth = 6;
             this.StoreName.Name = "StoreName";
+            this.StoreName.Width = 97;
             // 
             // StoreId
             // 
@@ -189,6 +119,7 @@
             this.StoreId.HeaderText = "仓库标识";
             this.StoreId.MinimumWidth = 6;
             this.StoreId.Name = "StoreId";
+            this.StoreId.Width = 97;
             // 
             // SRegionId
             // 
@@ -196,6 +127,7 @@
             this.SRegionId.HeaderText = "仓库区域标识";
             this.SRegionId.MinimumWidth = 6;
             this.SRegionId.Name = "SRegionId";
+            this.SRegionId.Width = 127;
             // 
             // SRegionName
             // 
@@ -203,6 +135,7 @@
             this.SRegionName.HeaderText = "仓库区域名字";
             this.SRegionName.MinimumWidth = 6;
             this.SRegionName.Name = "SRegionName";
+            this.SRegionName.Width = 127;
             // 
             // SRegionNo
             // 
@@ -210,6 +143,7 @@
             this.SRegionNo.HeaderText = "仓库区域编号";
             this.SRegionNo.MinimumWidth = 6;
             this.SRegionNo.Name = "SRegionNo";
+            this.SRegionNo.Width = 127;
             // 
             // SRTemperature
             // 
@@ -217,6 +151,7 @@
             this.SRTemperature.HeaderText = "仓库区域温度";
             this.SRTemperature.MinimumWidth = 6;
             this.SRTemperature.Name = "SRTemperature";
+            this.SRTemperature.Width = 127;
             // 
             // AllowLowTemperature
             // 
@@ -224,6 +159,7 @@
             this.AllowLowTemperature.HeaderText = "最低温度线";
             this.AllowLowTemperature.MinimumWidth = 6;
             this.AllowLowTemperature.Name = "AllowLowTemperature";
+            this.AllowLowTemperature.Width = 112;
             // 
             // AllowHighTemperature
             // 
@@ -231,6 +167,7 @@
             this.AllowHighTemperature.HeaderText = "最高温度线";
             this.AllowHighTemperature.MinimumWidth = 6;
             this.AllowHighTemperature.Name = "AllowHighTemperature";
+            this.AllowHighTemperature.Width = 112;
             // 
             // TemperStateText
             // 
@@ -238,6 +175,7 @@
             this.TemperStateText.HeaderText = "温度状态";
             this.TemperStateText.MinimumWidth = 6;
             this.TemperStateText.Name = "TemperStateText";
+            this.TemperStateText.Width = 97;
             // 
             // Remark
             // 
@@ -245,6 +183,81 @@
             this.Remark.HeaderText = "注释";
             this.Remark.MinimumWidth = 6;
             this.Remark.Name = "Remark";
+            this.Remark.Width = 67;
+            // 
+            // uPanel2
+            // 
+            this.uPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
+            this.uPanel2.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
+            this.uPanel2.BgColor2 = System.Drawing.Color.Transparent;
+            this.uPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
+            this.uPanel2.Controls.Add(this.btnExportExcel);
+            this.uPanel2.Controls.Add(this.btnRefresh);
+            this.uPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.uPanel2.Location = new System.Drawing.Point(4, 58);
+            this.uPanel2.Name = "uPanel2";
+            this.uPanel2.Radius = 5;
+            this.uPanel2.Size = new System.Drawing.Size(988, 58);
+            this.uPanel2.TabIndex = 2;
+            // 
+            // btnExportExcel
+            // 
+            this.btnExportExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(103)))), ((int)(((byte)(246)))));
+            this.btnExportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportExcel.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.btnExportExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExportExcel.Location = new System.Drawing.Point(116, 15);
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(75, 30);
+            this.btnExportExcel.TabIndex = 1;
+            this.btnExportExcel.Text = "导出";
+            this.btnExportExcel.UseVisualStyleBackColor = false;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(103)))), ((int)(((byte)(246)))));
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(26, 15);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 30);
+            this.btnRefresh.TabIndex = 0;
+            this.btnRefresh.Text = "刷新";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // uPanel1
+            // 
+            this.uPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.uPanel1.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
+            this.uPanel1.BgColor2 = System.Drawing.Color.Transparent;
+            this.uPanel1.BorderColor = System.Drawing.Color.Red;
+            this.uPanel1.Controls.Add(this.lblInfo);
+            this.uPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.uPanel1.Location = new System.Drawing.Point(0, 0);
+            this.uPanel1.Name = "uPanel1";
+            this.uPanel1.Radius = 5;
+            this.uPanel1.Size = new System.Drawing.Size(996, 60);
+            this.uPanel1.TabIndex = 0;
+            // 
+            // lblInfo
+            // 
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
+            this.lblInfo.Font = new System.Drawing.Font("微软雅黑", 10.8F);
+            this.lblInfo.ForeColor = System.Drawing.Color.White;
+            this.lblInfo.Location = new System.Drawing.Point(12, 19);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(118, 24);
+            this.lblInfo.TabIndex = 0;
+            this.lblInfo.Text = "仓库分区报表";
             // 
             // FormVSRReport
             // 
@@ -260,10 +273,11 @@
             this.Name = "FormVSRReport";
             this.ShowIcon = false;
             this.Text = "仓库分区报表页面";
+            this.Load += new System.EventHandler(this.FormVSRReport_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVSRList)).EndInit();
+            this.uPanel2.ResumeLayout(false);
             this.uPanel1.ResumeLayout(false);
             this.uPanel1.PerformLayout();
-            this.uPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVSRList)).EndInit();
             this.ResumeLayout(false);
 
         }

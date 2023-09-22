@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Z.WMS.Product;
 using Z.WMS.Properties;
+using Z.WMS.Report;
 using Z.WMS.Store;
 using Z.WMS.StoreTemper;
 using Z.WMS.UControls;
@@ -16,12 +17,35 @@ namespace Z.WMS
 {
     public class BttonPage
     {
+        /// <summary>
+        /// 仓库管理
+        /// </summary>
         private UPageButton btnStorePage;
         private UPageButton btnSRegionPage;
+
+        /// <summary>
+        /// 产品管理
+        /// </summary>
         private UPageButton btnProductInStorePage;
         private UPageButton btnProductPage;
+
+        /// <summary>
+        /// 仓库温度管理
+        /// </summary>
         private UPageButton btnStoreTemperPage;
+
+        /// <summary>
+        /// 报表管理
+        /// </summary>
+        private UPageButton btnVPSPage;
+        private UPageButton btnVSRTPage;
+        private UPageButton btnVSRPage;
+
+        /// <summary>
+        /// 用户管理
+        /// </summary>
         private UPageButton btnUserListPage;
+
 
         public BttonPage()
         {
@@ -31,8 +55,14 @@ namespace Z.WMS
             BuildBtnProductPage();
             BuildBtnStoreTemperPage();
             BuildBtnUserListPage();
+            BuildBtnVPSPage();
+            BuildBtnVSRPage();
+            BuildBtnVSRTPage();
         }
 
+        /// <summary>
+        /// 仓库管理
+        /// </summary>
         public UPageButton BtnStorePage
         {
             get => btnStorePage;
@@ -41,6 +71,10 @@ namespace Z.WMS
         {
             get => btnSRegionPage;
         }
+
+        /// <summary>
+        /// 产品管理
+        /// </summary>
         public UPageButton BtnProductInStorePage
         {
             get => btnProductInStorePage;
@@ -49,11 +83,34 @@ namespace Z.WMS
         {
             get => btnProductPage;
         }
+
+        /// <summary>
+        /// 仓库温度管理
+        /// </summary>
         public UPageButton BtnStoreTemperPage
         {
             get => btnStoreTemperPage;
         }
 
+        /// <summary>
+        /// 报表管理
+        /// </summary>
+        public UPageButton BtnVPSPage
+        {
+            get => btnVPSPage;
+        }
+        public UPageButton BtnVSRTPage
+        {
+            get => btnVSRTPage;
+        }
+        public UPageButton BtnVSRPage
+        {
+            get => btnVSRPage;
+        }
+
+        /// <summary>
+        /// 用户管理
+        /// </summary>
         public UPageButton BtnUserListPage
         {
             get => btnUserListPage;
@@ -143,6 +200,48 @@ namespace Z.WMS
             btnUserListPage.Size = new System.Drawing.Size(165, 40);
             btnUserListPage.TabIndex = 0;
             btnUserListPage.Tag = typeof(FormUserList).FullName;
+        }
+
+        private void BuildBtnVPSPage()
+        {
+            btnVPSPage = new UPageButton();
+            btnVPSPage.BackColor = System.Drawing.Color.Transparent;
+            btnVPSPage.BackgroundImage = Resources.btnbg01;
+            btnVPSPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            btnVPSPage.BtnText = "产品仓库页面";
+            btnVPSPage.Location = new System.Drawing.Point(3, -1);
+            btnVPSPage.Name = "btnVPSPage";
+            btnVPSPage.Size = new System.Drawing.Size(165, 40);
+            btnVPSPage.TabIndex = 0;
+            btnVPSPage.Tag = typeof(FormVPSReport).FullName;
+        }
+
+        private void BuildBtnVSRTPage()
+        {
+            btnVSRTPage = new UPageButton();
+            btnVSRTPage.BackColor = System.Drawing.Color.Transparent;
+            btnVSRTPage.BackgroundImage = Resources.btnbg02;
+            btnVSRTPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            btnVSRTPage.BtnText = "仓库分区温度页面";
+            btnVSRTPage.Location = new System.Drawing.Point(198, -1);
+            btnVSRTPage.Name = "btnVSRTPage";
+            btnVSRTPage.Size = new System.Drawing.Size(165, 40);
+            btnVSRTPage.TabIndex = 1;
+            btnVSRTPage.Tag = typeof(FormVSRTReport).FullName;
+        }
+
+        private void BuildBtnVSRPage()
+        {
+            btnVSRPage = new UPageButton();
+            btnVSRPage.BackColor = System.Drawing.Color.Transparent;
+            btnVSRPage.BackgroundImage = Resources.btnbg03;
+            btnVSRPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            btnVSRPage.BtnText = "仓库分区页面";
+            btnVSRPage.Location = new System.Drawing.Point(393, -1);
+            btnVSRPage.Name = "btnVSRPage";
+            btnVSRPage.Size = new System.Drawing.Size(165, 40);
+            btnVSRPage.TabIndex = 1;
+            btnVSRPage.Tag = typeof(FormVSRReport).FullName;
         }
 
         #endregion

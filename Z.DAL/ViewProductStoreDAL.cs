@@ -17,7 +17,7 @@ namespace Z.DAL
         public List<ViewProductStoreInfo> GetAllProductStoreList()
         {
             List<ViewProductStoreInfo> list = new List<ViewProductStoreInfo>();
-            string cols = "ProStoreId,ProductName,StoreName,SRegionName,ProductCount";
+            string cols = "ProStoreId,ProductId,ProductName,StoreId,StoreName,SRegionId,SRegionName,ProductCount";
             list = base.GetModelList(cols, 0);
             return list;
         }

@@ -17,9 +17,8 @@ namespace Z.Common
         /// <typeparam name="T"></typeparam>
         /// <param name="path"></param>
         /// <param name="data"></param>
-        public static void ToExcel<T>(string path, List<T> data)
+        public static void ToExcel<T>(string fileName, List<T> data)
         {
-            var fileName = Path.Combine(path, $"{DateTime.Now.ToString("yyyy-MM-dd")}.xlsx");
             var res = GetExcelList(data);
             MiniExcel.SaveAs(
                 path: fileName,
@@ -43,10 +42,14 @@ namespace Z.Common
             {
                 var excelColumn = new Dictionary<string, object>();
                 var type = item.GetType();
-                var properties = type.GetProperties(System.Reflection.BindingFlags.Instance);
+                var properties = type.GetProperties();
                 foreach (var property in properties)
                 {
                     var attr = property.GetCustomAttributes(typeof(AliasAttribute), false).FirstOrDefault() as AliasAttribute;
+                    if (attr == null)
+                    {
+                        continue;
+                    }
                     excelColumn.Add(attr.ColumnName, property.GetValue(item));
                 }
                 yield return excelColumn;

@@ -132,6 +132,18 @@ namespace Z.WMS
             RegisterPageBtnClick();
         }
 
+        private void btnReportManager_Click(object sender, EventArgs e)
+        {
+            InitBtnCheck();
+            btnStoreTemperManage.IsCheck = true;
+            panelPageTop.Controls.Clear();
+            panelPageTop.Controls.Add(bttonPage.BtnVPSPage);
+            panelPageTop.Controls.Add(bttonPage.BtnVSRTPage);
+            panelPageTop.Controls.Add(bttonPage.BtnVSRPage);
+            InitBtnPage();
+            RegisterPageBtnClick();
+        }
+
         private void btnUserManager_Click(object sender, EventArgs e)
         {
             InitBtnCheck();
@@ -224,7 +236,6 @@ namespace Z.WMS
                 panelPage.AddPanelForm(form);
             }
         }
-
     }
 }
 

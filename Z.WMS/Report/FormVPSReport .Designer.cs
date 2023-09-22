@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uPanel1 = new Z.WMS.UControls.UPanel();
             this.lblInfo = new System.Windows.Forms.Label();
             this.dgvVPSList = new System.Windows.Forms.DataGridView();
-            this.uPanel2 = new Z.WMS.UControls.UPanel();
-            this.btnExportExcel = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.ProStoreId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +42,9 @@
             this.SRegionId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SRegionName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uPanel2 = new Z.WMS.UControls.UPanel();
+            this.btnExportExcel = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.uPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVPSList)).BeginInit();
             this.uPanel2.SuspendLayout();
@@ -83,18 +83,19 @@
             this.dgvVPSList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvVPSList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvVPSList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvVPSList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvVPSList.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvVPSList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvVPSList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(155)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVPSList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvVPSList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvVPSList.ColumnHeadersHeight = 29;
             this.dgvVPSList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvVPSList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -110,23 +111,95 @@
             this.dgvVPSList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(61)))), ((int)(((byte)(133)))));
             this.dgvVPSList.Location = new System.Drawing.Point(2, 123);
             this.dgvVPSList.Name = "dgvVPSList";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVPSList.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvVPSList.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvVPSList.RowHeadersWidth = 51;
             this.dgvVPSList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(145)))), ((int)(((byte)(239)))));
-            this.dgvVPSList.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(145)))), ((int)(((byte)(239)))));
+            this.dgvVPSList.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvVPSList.RowTemplate.Height = 27;
             this.dgvVPSList.Size = new System.Drawing.Size(993, 460);
             this.dgvVPSList.TabIndex = 5;
+            // 
+            // ProStoreId
+            // 
+            this.ProStoreId.DataPropertyName = "ProStoreId";
+            this.ProStoreId.FillWeight = 106.383F;
+            this.ProStoreId.HeaderText = "产品仓库标识";
+            this.ProStoreId.MinimumWidth = 6;
+            this.ProStoreId.Name = "ProStoreId";
+            this.ProStoreId.Width = 127;
+            // 
+            // ProductId
+            // 
+            this.ProductId.DataPropertyName = "ProductId";
+            this.ProductId.FillWeight = 104.0263F;
+            this.ProductId.HeaderText = "产品标识";
+            this.ProductId.MinimumWidth = 6;
+            this.ProductId.Name = "ProductId";
+            this.ProductId.Width = 97;
+            // 
+            // ProductName
+            // 
+            this.ProductName.DataPropertyName = "ProductName";
+            this.ProductName.FillWeight = 101.983F;
+            this.ProductName.HeaderText = "产品名称";
+            this.ProductName.MinimumWidth = 6;
+            this.ProductName.Name = "ProductName";
+            this.ProductName.Width = 97;
+            // 
+            // StoreId
+            // 
+            this.StoreId.DataPropertyName = "StoreId";
+            this.StoreId.FillWeight = 100.2114F;
+            this.StoreId.HeaderText = "仓库标识";
+            this.StoreId.MinimumWidth = 6;
+            this.StoreId.Name = "StoreId";
+            this.StoreId.Width = 97;
+            // 
+            // StoreName
+            // 
+            this.StoreName.DataPropertyName = "StoreName";
+            this.StoreName.FillWeight = 98.67543F;
+            this.StoreName.HeaderText = "仓库名称";
+            this.StoreName.MinimumWidth = 6;
+            this.StoreName.Name = "StoreName";
+            this.StoreName.Width = 97;
+            // 
+            // SRegionId
+            // 
+            this.SRegionId.DataPropertyName = "SRegionId";
+            this.SRegionId.FillWeight = 97.3437F;
+            this.SRegionId.HeaderText = "仓库区域编号";
+            this.SRegionId.MinimumWidth = 6;
+            this.SRegionId.Name = "SRegionId";
+            this.SRegionId.Width = 127;
+            // 
+            // SRegionName
+            // 
+            this.SRegionName.DataPropertyName = "SRegionName";
+            this.SRegionName.FillWeight = 96.18906F;
+            this.SRegionName.HeaderText = "仓库区域名称";
+            this.SRegionName.MinimumWidth = 6;
+            this.SRegionName.Name = "SRegionName";
+            this.SRegionName.Width = 127;
+            // 
+            // ProductCount
+            // 
+            this.ProductCount.DataPropertyName = "ProductCount";
+            this.ProductCount.FillWeight = 95.18796F;
+            this.ProductCount.HeaderText = "商品数量";
+            this.ProductCount.MinimumWidth = 6;
+            this.ProductCount.Name = "ProductCount";
+            this.ProductCount.Width = 97;
             // 
             // uPanel2
             // 
@@ -157,6 +230,7 @@
             this.btnExportExcel.TabIndex = 1;
             this.btnExportExcel.Text = "导出";
             this.btnExportExcel.UseVisualStyleBackColor = false;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
             // btnRefresh
             // 
@@ -171,70 +245,7 @@
             this.btnRefresh.TabIndex = 0;
             this.btnRefresh.Text = "刷新";
             this.btnRefresh.UseVisualStyleBackColor = false;
-            // 
-            // ProStoreId
-            // 
-            this.ProStoreId.DataPropertyName = "ProStoreId";
-            this.ProStoreId.FillWeight = 106.383F;
-            this.ProStoreId.HeaderText = "产品仓库标识";
-            this.ProStoreId.MinimumWidth = 6;
-            this.ProStoreId.Name = "ProStoreId";
-            // 
-            // ProductId
-            // 
-            this.ProductId.DataPropertyName = "ProductId";
-            this.ProductId.FillWeight = 104.0263F;
-            this.ProductId.HeaderText = "产品标识";
-            this.ProductId.MinimumWidth = 6;
-            this.ProductId.Name = "ProductId";
-            // 
-            // ProductName
-            // 
-            this.ProductName.DataPropertyName = "ProductName";
-            this.ProductName.FillWeight = 101.983F;
-            this.ProductName.HeaderText = "产品名称";
-            this.ProductName.MinimumWidth = 6;
-            this.ProductName.Name = "ProductName";
-            // 
-            // StoreId
-            // 
-            this.StoreId.DataPropertyName = "StoreId";
-            this.StoreId.FillWeight = 100.2114F;
-            this.StoreId.HeaderText = "仓库标识";
-            this.StoreId.MinimumWidth = 6;
-            this.StoreId.Name = "StoreId";
-            // 
-            // StoreName
-            // 
-            this.StoreName.DataPropertyName = "StoreName";
-            this.StoreName.FillWeight = 98.67543F;
-            this.StoreName.HeaderText = "仓库名称";
-            this.StoreName.MinimumWidth = 6;
-            this.StoreName.Name = "StoreName";
-            // 
-            // SRegionId
-            // 
-            this.SRegionId.DataPropertyName = "SRegionId";
-            this.SRegionId.FillWeight = 97.3437F;
-            this.SRegionId.HeaderText = "仓库区域编号";
-            this.SRegionId.MinimumWidth = 6;
-            this.SRegionId.Name = "SRegionId";
-            // 
-            // SRegionName
-            // 
-            this.SRegionName.DataPropertyName = "SRegionName";
-            this.SRegionName.FillWeight = 96.18906F;
-            this.SRegionName.HeaderText = "仓库区域名称";
-            this.SRegionName.MinimumWidth = 6;
-            this.SRegionName.Name = "SRegionName";
-            // 
-            // ProductCount
-            // 
-            this.ProductCount.DataPropertyName = "ProductCount";
-            this.ProductCount.FillWeight = 95.18796F;
-            this.ProductCount.HeaderText = "商品数量";
-            this.ProductCount.MinimumWidth = 6;
-            this.ProductCount.Name = "ProductCount";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // FormVPSReport
             // 
@@ -250,6 +261,7 @@
             this.Name = "FormVPSReport";
             this.ShowIcon = false;
             this.Text = "产品仓库报表页面";
+            this.Load += new System.EventHandler(this.FormVPSReport_Load);
             this.uPanel1.ResumeLayout(false);
             this.uPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVPSList)).EndInit();

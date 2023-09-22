@@ -34,7 +34,7 @@ namespace Z.DAL
         public List<ViewSRegionTemperInfo> GetAllSRegionTemperList()
         {
             string strWhere = "1=1";
-            string cols = CreateSql.GetColsString<ViewSRegionTemperInfo>("TemperState");
+            string cols = CreateSql.GetColsString<ViewSRegionTemperInfo>("TemperState,TemperRange");
             return base.GetModelList(strWhere, cols);
         }
     }

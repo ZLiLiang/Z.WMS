@@ -39,19 +39,19 @@ namespace Z.WMS
             this.label1 = new System.Windows.Forms.Label();
             this.panelPageTop = new System.Windows.Forms.Panel();
             this.panelPage = new System.Windows.Forms.Panel();
+            this.panelTop = new System.Windows.Forms.Panel();
             this.uPanel1 = new Z.WMS.UControls.UPanel();
+            this.btnReportManager = new Z.WMS.UControls.UMenuButton();
             this.btnUserManager = new Z.WMS.UControls.UMenuButton();
             this.btnStoreTemperManage = new Z.WMS.UControls.UMenuButton();
             this.btnProductManage = new Z.WMS.UControls.UMenuButton();
             this.btnStoreManage = new Z.WMS.UControls.UMenuButton();
-            this.panelTop = new System.Windows.Forms.Panel();
             this.btnClose = new Z.WMS.UControls.UIconButton();
             this.btnMax = new Z.WMS.UControls.UIconButton();
             this.btnMin = new Z.WMS.UControls.UIconButton();
-            this.btnReportManager = new Z.WMS.UControls.UMenuButton();
             this.panel2.SuspendLayout();
-            this.uPanel1.SuspendLayout();
             this.panelTop.SuspendLayout();
+            this.uPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -131,6 +131,21 @@ namespace Z.WMS
             this.panelPage.Size = new System.Drawing.Size(1015, 573);
             this.panelPage.TabIndex = 10;
             // 
+            // panelTop
+            // 
+            this.panelTop.BackgroundImage = global::Z.WMS.Properties.Resources.logo;
+            this.panelTop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelTop.Controls.Add(this.btnClose);
+            this.panelTop.Controls.Add(this.btnMax);
+            this.panelTop.Controls.Add(this.btnMin);
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Location = new System.Drawing.Point(3, 2);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(1376, 89);
+            this.panelTop.TabIndex = 0;
+            this.panelTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTop_MouseDown);
+            this.panelTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTop_MouseMove);
+            // 
             // uPanel1
             // 
             this.uPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -150,6 +165,18 @@ namespace Z.WMS
             this.uPanel1.Radius = 8;
             this.uPanel1.Size = new System.Drawing.Size(276, 630);
             this.uPanel1.TabIndex = 1;
+            // 
+            // btnReportManager
+            // 
+            this.btnReportManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
+            this.btnReportManager.BtnImg = ((System.Drawing.Image)(resources.GetObject("btnReportManager.BtnImg")));
+            this.btnReportManager.BtnText = "报表管理";
+            this.btnReportManager.IsCheck = false;
+            this.btnReportManager.Location = new System.Drawing.Point(1, 202);
+            this.btnReportManager.Name = "btnReportManager";
+            this.btnReportManager.Size = new System.Drawing.Size(274, 60);
+            this.btnReportManager.TabIndex = 0;
+            this.btnReportManager.Click += new System.EventHandler(this.btnReportManager_Click);
             // 
             // btnUserManager
             // 
@@ -207,21 +234,6 @@ namespace Z.WMS
             this.btnStoreManage.TabIndex = 0;
             this.btnStoreManage.Click += new System.EventHandler(this.btnStoreManage_Click);
             // 
-            // panelTop
-            // 
-            this.panelTop.BackgroundImage = global::Z.WMS.Properties.Resources.logo;
-            this.panelTop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelTop.Controls.Add(this.btnClose);
-            this.panelTop.Controls.Add(this.btnMax);
-            this.panelTop.Controls.Add(this.btnMin);
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(3, 2);
-            this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1376, 89);
-            this.panelTop.TabIndex = 0;
-            this.panelTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTop_MouseDown);
-            this.panelTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTop_MouseMove);
-            // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -252,6 +264,7 @@ namespace Z.WMS
             this.btnMax.TabIndex = 1;
             this.btnMax.Text = "1";
             this.btnMax.UseVisualStyleBackColor = false;
+            this.btnMax.Visible = false;
             // 
             // btnMin
             // 
@@ -267,17 +280,7 @@ namespace Z.WMS
             this.btnMin.TabIndex = 0;
             this.btnMin.Text = "0";
             this.btnMin.UseVisualStyleBackColor = false;
-            // 
-            // btnReportManager
-            // 
-            this.btnReportManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
-            this.btnReportManager.BtnImg = ((System.Drawing.Image)(resources.GetObject("btnReportManager.BtnImg")));
-            this.btnReportManager.BtnText = "报表管理";
-            this.btnReportManager.IsCheck = false;
-            this.btnReportManager.Location = new System.Drawing.Point(1, 202);
-            this.btnReportManager.Name = "btnReportManager";
-            this.btnReportManager.Size = new System.Drawing.Size(274, 60);
-            this.btnReportManager.TabIndex = 0;
+            this.btnMin.Visible = false;
             // 
             // FormMain
             // 
@@ -298,8 +301,8 @@ namespace Z.WMS
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.uPanel1.ResumeLayout(false);
             this.panelTop.ResumeLayout(false);
+            this.uPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

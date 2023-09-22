@@ -61,7 +61,7 @@ namespace Z.WMS
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.WindowState = FormWindowState.Maximized;
-            form.Dock = DockStyle.Fill;
+            //form.Dock = DockStyle.Fill; //开始后无法显示滚动条 ！warn
             panel.AutoScroll = true;
             panel.Controls.Add(form);
             form.Show();
