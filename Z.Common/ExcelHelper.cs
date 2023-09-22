@@ -46,7 +46,7 @@ namespace Z.Common
                 var properties = type.GetProperties(System.Reflection.BindingFlags.Instance);
                 foreach (var property in properties)
                 {
-                    var attr = property.GetCustomAttributes(typeof(ColumnAttribute), false).FirstOrDefault() as ColumnAttribute;
+                    var attr = property.GetCustomAttributes(typeof(AliasAttribute), false).FirstOrDefault() as AliasAttribute;
                     excelColumn.Add(attr.ColumnName, property.GetValue(item));
                 }
                 yield return excelColumn;

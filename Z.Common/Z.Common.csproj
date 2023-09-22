@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="AttributeHelper.cs" />
     <Compile Include="AutoMapper.cs" />
+    <Compile Include="CustomAttributes\AliasAttribute.cs" />
     <Compile Include="CustomAttributes\ColumnAttribute.cs" />
     <Compile Include="CustomAttributes\PrimaryKeyAttribute.cs" />
     <Compile Include="CustomAttributes\TableAttribute.cs" />
