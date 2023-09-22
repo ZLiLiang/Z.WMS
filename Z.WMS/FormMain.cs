@@ -135,7 +135,7 @@ namespace Z.WMS
         private void btnReportManager_Click(object sender, EventArgs e)
         {
             InitBtnCheck();
-            btnStoreTemperManage.IsCheck = true;
+            btnReportManager.IsCheck = true;
             panelPageTop.Controls.Clear();
             panelPageTop.Controls.Add(bttonPage.BtnVPSPage);
             panelPageTop.Controls.Add(bttonPage.BtnVSRTPage);
@@ -165,6 +165,8 @@ namespace Z.WMS
             btnProductManage.BackColor = Color.FromArgb(45, 50, 116);
             btnStoreTemperManage.IsCheck = false;
             btnStoreTemperManage.BackColor = Color.FromArgb(45, 50, 116);
+            btnReportManager.IsCheck = false;
+            btnReportManager.BackColor = Color.FromArgb(45, 50, 116);
             btnUserManager.IsCheck = false;
             btnUserManager.BackColor = Color.FromArgb(45, 50, 116);
         }
