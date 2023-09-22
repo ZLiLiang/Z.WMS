@@ -31,6 +31,7 @@ namespace Z.WMS
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblLoginTime = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,6 +48,7 @@ namespace Z.WMS
             this.btnClose = new Z.WMS.UControls.UIconButton();
             this.btnMax = new Z.WMS.UControls.UIconButton();
             this.btnMin = new Z.WMS.UControls.UIconButton();
+            this.btnReportManager = new Z.WMS.UControls.UMenuButton();
             this.panel2.SuspendLayout();
             this.uPanel1.SuspendLayout();
             this.panelTop.SuspendLayout();
@@ -137,6 +139,7 @@ namespace Z.WMS
             this.uPanel1.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
             this.uPanel1.BgColor2 = System.Drawing.Color.Transparent;
             this.uPanel1.BorderColor = System.Drawing.Color.Red;
+            this.uPanel1.Controls.Add(this.btnReportManager);
             this.uPanel1.Controls.Add(this.btnUserManager);
             this.uPanel1.Controls.Add(this.btnStoreTemperManage);
             this.uPanel1.Controls.Add(this.btnProductManage);
@@ -156,10 +159,10 @@ namespace Z.WMS
             this.btnUserManager.BtnImg = global::Z.WMS.Properties.Resources._05;
             this.btnUserManager.BtnText = "用户管理";
             this.btnUserManager.IsCheck = false;
-            this.btnUserManager.Location = new System.Drawing.Point(1, 202);
+            this.btnUserManager.Location = new System.Drawing.Point(1, 262);
             this.btnUserManager.Name = "btnUserManager";
             this.btnUserManager.Size = new System.Drawing.Size(274, 60);
-            this.btnUserManager.TabIndex = 1;
+            this.btnUserManager.TabIndex = 0;
             this.btnUserManager.Click += new System.EventHandler(this.btnUserManager_Click);
             // 
             // btnStoreTemperManage
@@ -265,6 +268,17 @@ namespace Z.WMS
             this.btnMin.Text = "0";
             this.btnMin.UseVisualStyleBackColor = false;
             // 
+            // btnReportManager
+            // 
+            this.btnReportManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
+            this.btnReportManager.BtnImg = ((System.Drawing.Image)(resources.GetObject("btnReportManager.BtnImg")));
+            this.btnReportManager.BtnText = "报表管理";
+            this.btnReportManager.IsCheck = false;
+            this.btnReportManager.Location = new System.Drawing.Point(1, 202);
+            this.btnReportManager.Name = "btnReportManager";
+            this.btnReportManager.Size = new System.Drawing.Size(274, 60);
+            this.btnReportManager.TabIndex = 0;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -308,6 +322,7 @@ namespace Z.WMS
         private UControls.UMenuButton btnStoreTemperManage;
         private UControls.UMenuButton btnProductManage;
         private UControls.UMenuButton btnUserManager;
+        private UControls.UMenuButton btnReportManager;
     }
 }
 

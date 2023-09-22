@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Report\FormVSRReport .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\FormVSRReport .Designer.cs">
+      <DependentUpon>FormVSRReport .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FormVPSReport .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\FormVPSReport .Designer.cs">
+      <DependentUpon>FormVPSReport .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FormVSRTReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\FormVSRTReport.Designer.cs">
+      <DependentUpon>FormVSRTReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="User\FormUserInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +230,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\FormVSRReport .resx">
+      <DependentUpon>FormVSRReport .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\FormVPSReport .resx">
+      <DependentUpon>FormVPSReport .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\FormVSRTReport.resx">
+      <DependentUpon>FormVSRTReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StoreTemper\FormSetSRegionTemperature.resx">
       <DependentUpon>FormSetSRegionTemperature.cs</DependentUpon>
     </EmbeddedResource>
